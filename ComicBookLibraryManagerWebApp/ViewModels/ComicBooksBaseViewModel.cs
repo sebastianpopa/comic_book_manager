@@ -21,10 +21,10 @@ namespace ComicBookLibraryManagerWebApp.ViewModels
         /// <summary>
         /// Initializes the view model.
         /// </summary>
-        public virtual void Init()
+        public virtual void Init(Repository repository)
         {
             SeriesSelectListItems = new SelectList(
-                new List<Series>(), // TODO Get the series list.
+                repository.GetSeries(),
                 "Id", "Title");
         }
     }

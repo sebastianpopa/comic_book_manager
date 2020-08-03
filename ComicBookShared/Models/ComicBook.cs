@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,14 @@ namespace ComicBookShared.Models
         }
 
         public int Id { get; set; }
+        [DisplayName("Series")]
         public int SeriesId { get; set; }
+        [DisplayName("Issue Number")]
         public int IssueNumber { get; set; }
         public string Description { get; set; }
+        [DisplayName("Published On")]
         public DateTime PublishedOn { get; set; }
+        [DisplayName("Average Rating")]
         public decimal? AverageRating { get; set; }
 
         public Series Series { get; set; }
